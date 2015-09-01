@@ -18,7 +18,6 @@ public class FlagComponent extends JComponent {
 	/*
 	 * paint method called whenever window is resized
 	 * draws images on screen
-	 * NOTE: look up OG colors red and blue and implement them
 	 * @see javax.swing.JComponent#paint(java.awt.Graphics)
 	 */
 	public void paint(Graphics g) {
