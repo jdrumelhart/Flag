@@ -10,7 +10,7 @@ public class FlagFrame extends JFrame {
 		init(d);	
 	}
 	
-	//Creating background as white
+	//Creating window
 	public void init(Dimension d) {
 		setSize(d);
 		repaint();
