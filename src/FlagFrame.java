@@ -6,7 +6,7 @@ public class FlagFrame extends JFrame {
 	
 	//constructor
 	public FlagFrame () {
-		d.setSize(700, 600);
+		d.setSize((int)(1.9 * 700), 700);
 		init(d);	
 	}
 	
