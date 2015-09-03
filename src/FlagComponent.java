@@ -68,13 +68,13 @@ public class FlagComponent extends JComponent {
 		int c2 = 0;
 		for(int i = 0; i < 9; i++) {
 			for(int j = 0; j < 11; j++) {
-				centerY[c1] = (i+i) * scalar * 0.054;
+				centerY[c1] = (i) * scalar * 0.054;
 				c1++;
 			}
 		}
 		for(int i = 0; i < 9; i++) {
 			for(int j = 0; j < 11; j++) {
-				centerX[c2] = (j+1) * scalar * 0.054;
+				centerX[c2] = (j) * scalar * 0.054;
 				c2++;
 			}
 		}
