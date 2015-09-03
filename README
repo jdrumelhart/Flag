@@ -17,7 +17,11 @@ Structure:
 Challenges:
 One of the major challenges in this assingnment was creating the scaling code.
 I went through several different versions of the same code, with slight variations,
-before settling on the current code. Another challenge
+before settling on the current code. Another challenge was deciding where to put
+pieces of code. I had to decide whether to create a new method or continue in my 
+current method. My final, and greatest, challenge was time management. I had to decide
+whether to expend my energy and time on the math for the stars, or on the creation of 
+the center points.
 
 Acknowledgements:
 Received help and code from Albert.
