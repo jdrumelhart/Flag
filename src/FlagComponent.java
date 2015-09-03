@@ -66,20 +66,19 @@ public class FlagComponent extends JComponent {
 		double[] centerY = new double[99];
 		int c1 = 0;
 		int c2 = 0;
-		for(int i = 0; i < 9; i++) {
+		for(int i = 1; i < 10; i++) {
 			for(int j = 0; j < 11; j++) {
 				centerY[c1] = (i) * scalar * 0.054;
 				c1++;
 			}
 		}
 		for(int i = 0; i < 9; i++) {
-			for(int j = 0; j < 11; j++) {
-				centerX[c2] = (j) * scalar * 0.054;
+			for(int j = 1; j < 12; j++) {
+				centerX[c2] = (j) * scalar * 0.063;
 				c2++;
 			}
 		}
-		for(int i = 0; i < 99; i++) {
-			System.out.println(centerY[i]);
+		for(int i = 0; i < 99; i+=2) {
 			g.fillOval((int)centerX[i], (int)centerY[i], (int)10, (int)10);
 		}
 	}
