@@ -78,7 +78,7 @@ public class FlagComponent extends JComponent {
 				c2++;
 			}
 		}
-		for(int i = 0; i < 99; i++) {
+		for(int i = 0; i < 99; i+=2) {
 			System.out.println(centerY[i]);
 			g.fillOval((int)centerX[i], (int)centerY[i], (int)10, (int)10);
 		}
