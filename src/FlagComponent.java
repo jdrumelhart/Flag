@@ -43,20 +43,39 @@ public class FlagComponent extends JComponent {
 		g.setColor(OGBLUE);
 		g.fillRect(0,0,(int)(scalar * 0.76), (int) ((scalar/13) * 7));
 		g.setColor(Color.WHITE);
+		/*
 		double centerX = 0.063 * scalar;
 		double centerY = 0.054 * scalar;
-		int[] xPoints = new int[5];
-		int[] yPoints = new int[5];
+		int[] xPoints = new int[6];
+		int[] yPoints = new int[6];
 		xPoints[0] = (int)centerX;
 		yPoints[0] = (int)(centerY - scalar * 0.0616);
-		xPoints[1] = (int)(centerX - scalar * 0.0616 * Math.cos(Math.PI / 10));
-		yPoints[1] = (int)(centerY + scalar * 0.0616 * Math.sin(Math.PI / 10));
-		xPoints[2] = (int)(centerX - scalar * 0.0616 * Math.cos(3 * Math.PI / 10));
-		yPoints[2] = (int)(centerY + scalar * 0.0616 * Math.sin(3 * Math.PI / 10));
-		xPoints[3] = (int)(centerX + scalar * 0.0616 * Math.cos(3 * Math.PI / 10));
-		yPoints[3] = (int)(centerY - scalar * 0.0616 * Math.sin(3 * Math.PI / 10));
-		xPoints[4] = (int)(centerX - scalar * 0.0616 * Math.cos(Math.PI / 10));
-		yPoints[4] = (int)(centerY + scalar * 0.0616 * Math.sin(Math.PI / 10));
-		g.fillPolygon(xPoints, yPoints, 5);
+		xPoints[1] = (int)(centerX + scalar * 0.0616 * Math.cos(Math.PI / 10));
+		yPoints[1] = (int)(centerY - scalar * 0.0616 * Math.sin(Math.PI / 10));
+		xPoints[2] = (int)(centerX + scalar * 0.0616 * Math.cos(3 * Math.PI / 10));
+		yPoints[2] = (int)(centerY - scalar * 0.0616 * Math.sin(3 * Math.PI / 10));
+		xPoints[3] = (int)(centerX - scalar * 0.0616 * Math.cos(3 * Math.PI / 10));
+		yPoints[3] = (int)(centerY + scalar * 0.0616 * Math.sin(3 * Math.PI / 10));
+		xPoints[4] = (int)(centerX + scalar * 0.0616 * Math.cos(Math.PI / 10));
+		yPoints[4] = (int)(centerY - scalar * 0.0616 * Math.sin(Math.PI / 10));
+		xPoints[5] = (int)centerX;
+		yPoints[5] = (int)(centerY - scalar * 0.0616);
+		g.fillPolygon(xPoints, yPoints, 4);
+		*/
+		double[] centerX = new double[99];
+		double[] centerY = new double[99];
+		for(int i = 0; i < 9; i++) {
+			for(int j = 0; j < 11; j++) {
+				centerY[i] = (i+1) * scalar * 0.054;
+			}
+		}
+		for(int i = 0; i < 9; i++) {
+			for(int j = 0; j < 11; j++) {
+				centerX[j] = (j+1) * scalar * 0.054;
+			}
+		}
+		for(int i = 0; i < 99; i++) {
+			g.fillOval((int)centerX[i], (int)centerY[i], (int)10, (int)10);
+		}
 	}
 }
