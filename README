@@ -2,8 +2,30 @@ Joseph Rumelhart
 Period 4
 8/24/15
 
+Introduction:
+This program, created by Joseph Rumelhart with help from others, is intended 
+to create an American flag in a Java window that will scale with the window size.
+
+Specification:
+The specification for this project was to create an image of the American flag that 
+would preserve its aspect ratio while scaling to the size of the window it was in. 
+
+Errors:
+
+Structure:
+
+Challenges:
+One of the major challenges in this assingnment was creating the scaling code.
+I went through several different versions of the same code, with slight variations,
+before settling on the current code. Another challenge was deciding where to put
+pieces of code. I had to decide whether to create a new method or continue in my 
+current method. My final, and greatest, challenge was time management. I had to decide
+whether to expend my energy and time on the math for the stars, or on the creation of 
+the center points.
+
+Acknowledgements:
 Received help and code from Albert.
 Received verbal help from Ben.
-Moved project to Github.
 Received help from Ryan on star math + code.
 Received help on scaling from Bradley.
+Received help on star math from Eric.

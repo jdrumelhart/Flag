@@ -10,7 +10,10 @@ public class FlagFrame extends JFrame {
 		init(d);	
 	}
 	
-	//Creating window
+	/**
+	 * creates the window
+	 * @param d is dimension object
+	 */
 	public void init(Dimension d) {
 		setSize(d);
 		repaint();
