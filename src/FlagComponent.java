@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.math.*;
 
 public class FlagComponent extends JComponent {
+	private static final long serialVersionUID = 1L;
 	private Dimension d;
 	//Custom colors for flag
 	private final Color OGRED = new Color(0xBB133E);
@@ -61,7 +62,6 @@ public class FlagComponent extends JComponent {
 		int c1 = 0;
 		int c2 = 0;
 		//Creates the X values for the centers of the stars
-		double diameter = scalar * 0.0616;
 		for(int i = 1; i < 10; i++) {
 			for(int j = 0; j < 11; j++) {
 				centerY[c1] = (i) * scalar * 0.054;
@@ -75,22 +75,30 @@ public class FlagComponent extends JComponent {
 				c2++;
 			}
 		}
-<<<<<<< HEAD
-		for(int i = 0; i < 99; i+=2) {
-			System.out.println(centerY[i]);
-			g.fillOval((int)centerX[i], (int)centerY[i], (int)10, (int)10);
-=======
 		//Draws the stars
 		double currentX = 0;
 		double currentY = 0;
 		for(int i = 0; i < 99; i+=2) {
+			//Creates the star polygon
+			Polygon p = new Polygon();
 			currentX = centerX[i];
 			currentY = centerY[i];
-			double[] arrayX = {};
-			double[] arrayY = {};
-			//g.fillPolygon(arrayX[], arrayY[], 10);
-			g.fillOval((int)currentX, (int)currentY, 10,10);
->>>>>>> origin/master
+			//finds the outer radius of the star
+			double radius = scalar * 0.0616 * 0.5;
+			//finds the inner radius of the star
+			double radius2 = radius * Math.sin(Math.PI / 10.0) * Math.sin(3 * Math.PI / 10.0);
+			//creates the 10 points of the stars
+			p.addPoint((int)Math.round(currentX), (int)Math.round(currentY - radius));
+			p.addPoint((int)Math.round(currentX - radius2 * Math.cos(2 * Math.PI / 10.0)), (int)Math.round(currentY - radius * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX - radius * Math.cos(Math.PI / 10.0)), (int)Math.round(currentY - radius * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX - radius2 * Math.cos(Math.PI / 10.0)), (int)Math.round(currentY + radius2 * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX - radius * Math.cos(3 * Math.PI / 10.0)), (int)Math.round(currentY + radius * Math.sin(3 * Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX), (int)Math.round(currentY + radius * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX + radius * Math.cos(3 * Math.PI / 10.0)), (int)Math.round(currentY + radius * Math.sin(3 * Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX + radius2 * Math.cos(Math.PI / 10.0)), (int)Math.round(currentY + radius2 * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX + radius * Math.cos(Math.PI / 10.0)), (int)Math.round(currentY - radius * Math.sin(Math.PI / 10.0)));
+			p.addPoint((int)Math.round(currentX + radius2 * Math.cos(2 * Math.PI / 10.0)), (int)Math.round(currentY - radius * Math.sin(Math.PI / 10.0)));
+			g.fillPolygon(p);
 		}
 	}
 }

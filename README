@@ -5,14 +5,27 @@ Period 4
 Introduction:
 This program, created by Joseph Rumelhart with help from others, is intended 
 to create an American flag in a Java window that will scale with the window size.
+The window is resizable by dragging on any of the sides.
 
 Specification:
 The specification for this project was to create an image of the American flag that 
 would preserve its aspect ratio while scaling to the size of the window it was in. 
+My program fullfills this specification in two ways: it draws a complete American flag in a window,
+and it scales with window size while preserving the aspect ratio.
 
-Errors:
+Errors: 
+The primary errors occur when the window becomes too small for the draw and fill methods
+to have enough pixels. When this occurs, the stars become unrecognizable as such and seem to 
+become points. I might fix this by placing the star code within an if statement, so that if the window
+size decreased to that point, it would cease drawing the stars altogether.
 
 Structure:
+This project is divided into three classes: Main, FlagFrame, and FlagComponent.
+Main is the primary method and combines the other two classes into a coherent window.
+FlagFrame creates the outline of the the window, and extends JFrame.
+FlagComponent contains the majority of the code in the project. In addition to its constructors,
+FlagComponent contains paint(), which is called whenever the window is resized. This contains all of the code
+used for drawing the flag, including the scaler. This class extends JComponent.
 
 Challenges:
 One of the major challenges in this assingnment was creating the scaling code.
@@ -29,3 +42,4 @@ Received verbal help from Ben.
 Received help from Ryan on star math + code.
 Received help on scaling from Bradley.
 Received help on star math from Eric.
+I used the IDE Eclipse and the version control system Github.

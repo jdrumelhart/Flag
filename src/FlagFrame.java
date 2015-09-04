@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.JFrame;
 
 public class FlagFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	public Dimension d = new Dimension();
 	
 	//constructor
